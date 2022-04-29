@@ -23,12 +23,16 @@ const PrimaryCards = () => {
           <div
             className={`bg-gradient-to-b relative ${currentCrypto.from} ${currentCrypto.hueRotate} to-purple-50/0 rounded-3xl flex flex-col items-center p-4 h-[22rem]`}
           >
-            <img src={workstation} alt="work station" />
-            <div className="flex space-x-2 absolute bottom-[25%] items-center font-semibold text-indigo-600 w-full text-lg justify-center p-1">
+            <img
+              src={workstation}
+              alt="work station"
+              className="h-[300px] sm:h-full"
+            />
+            <div className="flex space-x-2 absolute bottom-[12%] items-center  font-bold text-indigo-600 w-full text-lg justify-center p-1">
               <HiClipboardCopy size={24} />
               <p className="">Work Station</p>
             </div>
-            <h3 className="font-bold absolute bottom-[15%] text-shadow dark:text-white xl:text-lg text-2xl">
+            <h3 className="font-bold absolute bottom-[5%] text-shadow dark:text-white text-2xl">
               Check Your Workstation
             </h3>
           </div>
@@ -46,7 +50,7 @@ const PrimaryCards = () => {
       </Card>
       <Card>
         <DropDownSelect />
-        <ul className="flex flex-col w-full">
+        <ul className="flex flex-col mt-10 dark:text-white w-full">
           {cardTwoItems.map((item, idx) => (
             <li
               className="flex justify-between p-2 items-center w-full rounded-lg hover:bg-gray-200"
@@ -60,7 +64,9 @@ const PrimaryCards = () => {
                   >
                     {captilaize(item.name)}
                   </p>
-                  <p className="capitalize text-gray-500 text-xs">{item.dec}</p>
+                  <p className="capitalize text-gray-500 dark:text-slate-200 text-xs">
+                    {item.dec}
+                  </p>
                 </div>
               </div>
               <div className="rotate-90">
@@ -71,7 +77,7 @@ const PrimaryCards = () => {
         </ul>
       </Card>
       <Card>
-        <div className="flex justify-between w-full items-center h-10 space-x-2 text-emerald-500 px-4 py-2">
+        <div className="flex justify-around w-full items-center h-10 space-x-2 text-emerald-500 px-4 py-2">
           <IoNewspaperSharp size={24} />
           <div className="text-gray-500 flex flex-col text-lg w-[80%] font-bold p-2">
             <p className="text-xs whitespace-nowrap font-normal">
@@ -80,7 +86,7 @@ const PrimaryCards = () => {
             <p>Newsfeed</p>
           </div>
         </div>
-        <div className="flex relative sm:flex-col w-full overflow-scroll scrollbar-hide sm:space-y-2 gap-2 h-[80%]">
+        <div className="flex relative sm:flex-col w-full overflow-scroll items-center scrollbar-hide sm:space-y-2 gap-2 h-full justify-center">
           {newsFeeds.map((item, idx) => (
             <NewsFeedCard
               style={{ top: `${(idx + 1) * 8}px` }}

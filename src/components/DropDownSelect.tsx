@@ -11,13 +11,13 @@ const DropDownSelect = () => {
   const { image, name, color } = selectedCrypto
   return (
     <>
-      <div className="flex p-2 px-3 rounded-md hover:shadow-lg shadow-inner w-full justify-between space-x-4 border items-center">
+      <div className="flex mt-10 p-2 px-3 rounded-md hover:shadow-lg shadow-inner w-full justify-between space-x-4 border items-center">
         <div className="flex space-x-2 items-center">
           <img src={image} alt="ethereum logo" className="w-[24px] h-[24px]" />
           <p className={`text-lg font-semibold ${color}`}>{name}</p>
         </div>
         <button
-          className="flex items-center space-x-2 text-sm font-base text-gray-500"
+          className="flex items-center space-x-2 text-sm font-base text-gray-500 dark:text-white"
           onClick={(e) => setSeeMore((p) => !p)}
         >
           <span>{!seeMore ? 'See More' : 'See Less'}</span>
@@ -28,7 +28,7 @@ const DropDownSelect = () => {
       </div>
 
       <div
-        className={`absolute bg-white rounded-lg top-[3rem] w-[95%] shadow-lg  transition-all duration-300 ${
+        className={`absolute bg-white dark:bg-dark2 rounded-lg top-[6rem] w-[95%] shadow-lg  transition-all duration-300 ${
           seeMore
             ? 'opacity-100 y-0 z-10'
             : 'opacity-0 w-0 -translate-y-[50px] -z-10'
@@ -53,7 +53,9 @@ const DropDownSelect = () => {
                 <p className={`font-semibold ${item.color}`}>{item.name}</p>
               </div>
               <div className="p-1">
-                <p className="text-gray-500 text-sm">{item.unit}</p>
+                <p className="dark:text-white text-gray-500 text-sm">
+                  {item.unit}
+                </p>
               </div>
             </li>
           ))}
