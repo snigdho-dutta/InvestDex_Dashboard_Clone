@@ -19,7 +19,7 @@ const PrimaryCards = () => {
   return (
     <div className="w-full space-x-4 xl:space-y-4 space-y-10 justify-center flex flex-wrap pt-10 pb-5 items-center">
       <Card>
-        <div className="h-full flex-col flex w-full relative p-2 pb-4">
+        <div className="h-full flex-col flex w-full relative  pb-4">
           <div
             className={`bg-gradient-to-b relative ${currentCrypto.from} ${currentCrypto.hueRotate} to-purple-50/0 rounded-3xl flex flex-col items-center p-4 h-[22rem]`}
           >
@@ -32,7 +32,7 @@ const PrimaryCards = () => {
               <HiClipboardCopy size={24} />
               <p className="">Work Station</p>
             </div>
-            <h3 className="font-bold absolute bottom-[5%] text-shadow dark:text-white text-2xl">
+            <h3 className="font-bold absolute whitespace-nowrap bottom-[0%] text-gray-500 text-shadow dark:text-white text-xl">
               Check Your Workstation
             </h3>
           </div>
@@ -86,7 +86,7 @@ const PrimaryCards = () => {
             <p>Newsfeed</p>
           </div>
         </div>
-        <div className="flex relative sm:flex-col w-full overflow-scroll items-center scrollbar-hide sm:space-y-2 gap-2 h-full justify-center">
+        <div className="flex relative sm:flex-col w-full overflow-scroll items-center scrollbar-hide sm:space-y-2 gap-2 h-full">
           {newsFeeds.map((item, idx) => (
             <NewsFeedCard
               style={{ top: `${(idx + 1) * 8}px` }}

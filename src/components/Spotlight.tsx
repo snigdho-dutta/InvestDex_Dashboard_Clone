@@ -74,7 +74,9 @@ const Spotlight = () => {
     <div className="w-full">
       <div className="font-semibold items-baseline dark:text-white flex space-x-4 p-2">
         <h1 className="text-2xl font-bold">Spotlight</h1>
-        <p className="text-shadow-md text-gray-300">9 Projects</p>
+        <p className="text-shadow-md text-gray-500 dark:text-gray-300">
+          9 Projects
+        </p>
       </div>
       <div className="flex w-full justify-start sm:justify-between md:justify-center xl:justify-center items-center md:py-10 md:flex-wrap gap-[1rem] overflow-scroll scrollbar-hide">
         {spotLightItems.map((item, idx) => {
