@@ -13,7 +13,7 @@ const Card: React.FC<{
   const [readMore, setReadMore] = useState(false)
   return (
     <div
-      className={`rounded-[30px] text-gray-500 dark:bg-dark2 dark:text-white bg-white shadow-md flex flex-col items-center md:w-[30%] xl:w-[23.5%] sm:w-[30%] p-2 w-[46%] space-y-3 relative
+      className={`rounded-[30px] text-gray-500 dark:bg-dark2 dark:text-white bg-white shadow-md flex flex-col items-center md:w-[30%] xl:min-w-[200px] xl:w-[23.5%] sm:w-[30%] p-2 min-w-[250px] space-y-3 relative
       ${readMore && desc.length > 70 && 'rounded-b-3xl'}
       `}
     >
@@ -71,22 +71,28 @@ const Card: React.FC<{
 
 const Spotlight = () => {
   return (
-    <div className="w-full flex justify-center xl:justify-start items-center py-10 flex-wrap gap-[1rem]">
-      {spotLightItems.map((item, idx) => {
-        const {
-          name,
-          tag,
-          desc,
-          image,
-          twitter: twitterUrl,
-          home: homeUrl,
-        } = item
-        return (
-          <Card
-            {...{ name, key: idx, tag, desc, image, twitterUrl, homeUrl }}
-          />
-        )
-      })}
+    <div className="w-full">
+      <div className="font-semibold items-baseline dark:text-white flex space-x-4 p-2">
+        <h1 className="text-2xl font-bold">Spotlight</h1>
+        <p className="text-shadow-md text-gray-300">9 Projects</p>
+      </div>
+      <div className="flex w-full justify-start sm:justify-between md:justify-center xl:justify-center items-center md:py-10 md:flex-wrap gap-[1rem] overflow-scroll scrollbar-hide">
+        {spotLightItems.map((item, idx) => {
+          const {
+            name,
+            tag,
+            desc,
+            image,
+            twitter: twitterUrl,
+            home: homeUrl,
+          } = item
+          return (
+            <Card
+              {...{ name, key: idx, tag, desc, image, twitterUrl, homeUrl }}
+            />
+          )
+        })}
+      </div>
     </div>
   )
 }

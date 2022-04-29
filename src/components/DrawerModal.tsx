@@ -10,7 +10,7 @@ const DrawerModal = () => {
   const [darkMode, setDarkMode] = useRecoilState(darkState)
 
   return (
-    <div className="fixed p-3 flex items-center flex-col bottom-[2rem] left-[10rem] z-10 bg-white rounded-2xl shadow-lg drop-shadow min-h-[200px] min-w-[300px] justify-around">
+    <div className="fixed p-3 flex items-center flex-col bottom-[2rem] left-[1rem] sm:left-[10rem] z-10 bg-white rounded-2xl shadow-lg drop-shadow min-h-[200px] min-w-[300px] justify-around">
       <div className="text-emerald-500 flex space-x-2 items-center border-b pb-2 border-emerald-500 text-semibold w-fit h-4 whitespace-nowrap">
         <IoLogOutOutline />
         <p>Login to InvestDex</p>

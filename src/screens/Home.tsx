@@ -36,8 +36,10 @@ const Home: React.FC = () => {
         </div>
       </div>
       <Header />
-      <PrimaryCards />
-      <Spotlight />
+      <div className="flex w-full flex-col space-y-10">
+        <PrimaryCards />
+        <Spotlight />
+      </div>
     </div>
   )
 }
