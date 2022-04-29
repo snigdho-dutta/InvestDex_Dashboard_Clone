@@ -49,32 +49,34 @@ const PrimaryCards = () => {
         </div>
       </Card>
       <Card>
-        <DropDownSelect />
-        <ul className="flex flex-col dark:text-white w-full">
-          {cardTwoItems.map((item, idx) => (
-            <li
-              className="flex justify-between p-2 items-center w-full rounded-lg hover:bg-gray-200 dark:hover:bg-white/10 overflow-auto scrollbar-hide"
-              key={idx + item.name}
-            >
-              <div className="flex items-center space-x-2">
-                <img src={item.img} alt={item.name} className="w-12 h-12" />
-                <div className="w-[70%]">
-                  <p
-                    className={`capitalize ${currentCrypto.color} invert hue-rotate-90 text-semibold`}
-                  >
-                    {captilaize(item.name)}
-                  </p>
-                  <p className="capitalize text-gray-500 dark:text-slate-200 text-xs">
-                    {item.dec}
-                  </p>
+        <div className="w-full min-h-[400px] md:min-h-fit flex flex-col items-center justify-around">
+          <DropDownSelect />
+          <ul className="flex flex-col dark:text-white w-full">
+            {cardTwoItems.map((item, idx) => (
+              <li
+                className="flex justify-between p-2 items-center w-full rounded-lg hover:bg-gray-200 dark:hover:bg-white/10 overflow-auto scrollbar-hide"
+                key={idx + item.name}
+              >
+                <div className="flex items-center space-x-2">
+                  <img src={item.img} alt={item.name} className="w-12 h-12" />
+                  <div className="w-[70%]">
+                    <p
+                      className={`capitalize ${currentCrypto.color} invert hue-rotate-90 text-semibold`}
+                    >
+                      {captilaize(item.name)}
+                    </p>
+                    <p className="capitalize text-gray-500 dark:text-slate-200 text-xs">
+                      {item.dec}
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="rotate-90">
-                <IoIosArrowUp />
-              </div>
-            </li>
-          ))}
-        </ul>
+                <div className="rotate-90">
+                  <IoIosArrowUp />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </Card>
       <Card>
         <div className="flex justify-around w-full items-center h-10 space-x-2 text-emerald-500 px-4 py-2">
@@ -86,7 +88,7 @@ const PrimaryCards = () => {
             <p>Newsfeed</p>
           </div>
         </div>
-        <div className="flex relative sm:flex-col w-full overflow-scroll items-center scrollbar-hide sm:space-y-2 gap-2 h-full">
+        <div className="flex relative md:flex-col w-full overflow-scroll items-center scrollbar-hide sm:space-y-2 gap-2 h-full">
           {newsFeeds.map((item, idx) => (
             <NewsFeedCard
               style={{ top: `${(idx + 1) * 8}px` }}

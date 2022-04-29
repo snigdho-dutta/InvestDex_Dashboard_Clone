@@ -13,7 +13,7 @@ const NewsFeedCard: React.FC<{
 }> = ({ heading, details, date, link, className, style }) => {
   return (
     <div
-      className={`rounded-md justify-around sm:customShadow border-2 min-h-[200px] sm:min-h-[300px] sm:h-6/6 sm:border-none rounded-b-3xl max-w-[300px] xl:max-w-[99%] flex flex-col sm:w-[96%] dark:bg-[#484848]  bg-white px-1 pt-3 py-2 sm:sticky ${className}`}
+      className={`rounded-lg min-w-fit sm:min-w-full justify-around md:customShadow shadow-md border-2 dark:border-gray-500  min-h-[200px] md:min-h-[300px] md:h-6/6 md:max-w-[300px] xl:max-w-[99%] flex flex-col md:w-[96%] dark:bg-[#484848]  bg-white px-1 pt-3 py-2 md:sticky ${className}`}
       style={{ ...style }}
     >
       <MdCircle size={10} className="absolute text-emerald-500 top-[2.5rem]" />

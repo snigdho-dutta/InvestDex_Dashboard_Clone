@@ -21,7 +21,10 @@ const SidebarCard = () => {
       <div className="flex justify-around text-center text-lg h-full itemx-center flex-col">
         <h1 className="text-2xl font-bold">#1</h1>
         <p className="text-gray-500 dark:text-slate-200">
-          Best pair is <span className="font-bold text-black">Hedron</span>{' '}
+          Best pair is{' '}
+          <span className="font-bold text-xl text-black dark:text-white">
+            Hedron
+          </span>{' '}
         </p>
         <h1 className={`${color} text-3xl font-bold`}>$0.000674523</h1>
         <h3 className="text-green-500 font-semibold text-xl">391.41%</h3>
