@@ -11,7 +11,7 @@ const DropDownSelect = () => {
   const { image, name, color } = selectedCrypto
   return (
     <>
-      <div className="flex mt-10 p-2 px-3 rounded-md hover:shadow-lg shadow-inner w-full justify-between space-x-4 border items-center">
+      <div className="flex mt-5 p-2 px-3 rounded-md hover:shadow-lg shadow-inner w-full justify-between space-x-4 border items-center">
         <div className="flex space-x-2 items-center">
           <img src={image} alt="ethereum logo" className="w-[24px] h-[24px]" />
           <p className={`text-lg font-semibold ${color}`}>{name}</p>

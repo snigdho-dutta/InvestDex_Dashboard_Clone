@@ -50,10 +50,10 @@ const PrimaryCards = () => {
       </Card>
       <Card>
         <DropDownSelect />
-        <ul className="flex flex-col mt-10 dark:text-white w-full">
+        <ul className="flex flex-col dark:text-white w-full">
           {cardTwoItems.map((item, idx) => (
             <li
-              className="flex justify-between p-2 items-center w-full rounded-lg hover:bg-gray-200"
+              className="flex justify-between p-2 items-center w-full rounded-lg hover:bg-gray-200 dark:hover:bg-white/10 overflow-auto scrollbar-hide"
               key={idx + item.name}
             >
               <div className="flex items-center space-x-2">
