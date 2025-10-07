@@ -6,8 +6,12 @@ A streamlined [Tailwind CSS v3.x](https://tailwindcss.com) template for [Create 
 
 
 ### Screenshots
+Mobile 
+<img width="1356" height="972" alt="image" src="https://github.com/user-attachments/assets/4817d21c-b266-42fb-bdf6-ebe78046bcf8" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/15bf58d8-2166-483d-ad73-ac3be65e6f88" />
+Desktop
+<img width="1915" height="972" alt="image" src="https://github.com/user-attachments/assets/0f20a26b-db21-4cfc-85b8-a89b319e3385" />
+
 
 
 
